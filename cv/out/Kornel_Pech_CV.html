@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kornél Péch, CV</title><style>
+@page { size: A4; margin: 0; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root { --ink:#1b1d21; --muted:#5d6470; --line:#e3e5e8; --accent:#1f4e79; }
+html { font-family: Inter, sans-serif; color: var(--ink); font-size: 9pt; line-height: 1.42;
+       -webkit-font-smoothing: antialiased; }
+body { width: 210mm; height: 297mm; overflow: hidden; padding: 14mm 14mm 11mm; }
+a { color: inherit; text-decoration: none; }
+mark { background: #fff1c2; color: #7a5a00; padding: 0 2px; border-radius: 2px; }
+header { padding-bottom: 5.5mm; border-bottom: 1px solid var(--line); margin-bottom: 5.5mm; }
+h1 { font-family: 'Inter Display', Inter, sans-serif; font-weight: 600; font-size: 25pt;
+     letter-spacing: -0.02em; line-height: 1.1; }
+.title { color: var(--accent); font-weight: 500; font-size: 11pt; margin-top: 1.5mm; }
+.contact { color: var(--muted); margin-top: 3mm; display: flex; flex-wrap: wrap; align-items: center; }
+.dot { width: 3px; height: 3px; background: #b5bac2; border-radius: 50%; margin: 0 2.4mm; display: inline-block; }
+.grid { display: grid; grid-template-columns: 1fr 58mm; gap: 9mm; }
+h2 { font-size: 7.6pt; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
+     color: var(--accent); margin-bottom: 2.6mm; }
+section { margin-bottom: 5.2mm; }
+section:last-child { margin-bottom: 0; }
+.entry { margin-bottom: 3.6mm; }
+.entry:last-child { margin-bottom: 0; }
+.row { display: flex; justify-content: space-between; align-items: baseline; gap: 4mm; }
+.role { font-weight: 600; font-size: 10pt; }
+.org { color: var(--muted); }
+.when { color: var(--muted); font-size: 8.4pt; white-space: nowrap; font-variant-numeric: tabular-nums; }
+ul { list-style: none; margin-top: 1.3mm; }
+li { position: relative; padding-left: 3.6mm; margin-bottom: 0.9mm; }
+li::before { content: ""; position: absolute; left: 0.4mm; top: 0.62em; width: 3.5px; height: 3.5px;
+             background: var(--accent); border-radius: 50%; }
+.pname { font-weight: 600; }
+.pdesc { color: var(--muted); }
+.stack { font-size: 8.2pt; color: var(--accent); margin: 0.6mm 0 0.6mm; }
+aside .entry { margin-bottom: 3mm; }
+.school { font-weight: 600; }
+.skill { margin-bottom: 2.4mm; }
+.skill b { display: block; font-weight: 600; font-size: 8.6pt; }
+.skill span { color: #3a3f47; }
+.lang { display: flex; justify-content: space-between; margin-bottom: 1mm; }
+.lang span:last-child { color: var(--muted); }
+.sport { font-weight: 500; }
+aside li { font-size: 8.8pt; }
+</style></head>
+<body>
+<header><h1>Kornél Péch</h1><div class="title">Data Science student</div>
+<div class="contact"><span>Budapest, Hungary</span><span class="dot"></span><a href="mailto:pechkornel01@gmail.com">pechkornel01@gmail.com</a><span class="dot"></span><a href="tel:+36302001692">+36 30 200 1692</a><span class="dot"></span><a href="https://github.com/pechkornel">github.com/pechkornel</a><span class="dot"></span><a href="https://pechkornel.dev">pechkornel.dev</a></div></header>
+<div class="grid">
+<main>
+<section><h2>Profile</h2><p>Data Science in Business BSc student at Corvinus University of Budapest. I am interested in Python, machine learning and large language models, and work with them in personal projects and in my thesis: I built a data collection system with a locally hosted language model, and my thesis extracts structured knowledge from text. I gained corporate experience as a controlling intern.</p></section>
+<section><h2>Experience</h2><div class="entry"><div class="row"><div><span class="role">Controlling Intern</span><span class="org">, Dometic</span></div><div class="when">August 2025</div></div><ul><li>Automating Excel-based workflows</li></ul></div><div class="entry"><div class="row"><div><span class="role">Web Development and AI Solutions</span><span class="org">, self-employed</span></div><div class="when"></div></div><ul><li>Lead finder tool using Google Places data with prospect scoring</li><li>Live Google review request automation for a Budapest flower shop (WooCommerce webhook, dedicated sending domain with SPF/DKIM/DMARC)</li><li>AI chatbots and automations, plus websites and webshops (WordPress, WooCommerce) for small and medium-sized businesses</li></ul></div></section>
+<section><h2>Projects</h2><div class="entry"><div><span class="pname">Credit Risk Early Warning System</span><span class="pdesc">: course project, deep learning part</span></div><div class="stack">Python, PyTorch, pandas, scikit-learn</div><div>Late-fusion model of an LSTM and an MLP encoder over daily market data (CDS, yields, FX volatility) and monthly macro data, predicting S&amp;P sovereign rating changes 30-90 days ahead. Chronological validation and class weighting for rare events.</div></div><div class="entry"><div><span class="pname">The Sentiment Gap</span><span class="pdesc">: text analytics team project</span></div><div class="stack">Python, NLTK, scikit-learn, SciPy</div><div>On 100,000 Amazon reviews, star rating and text sentiment disagree in 44.5% of cases (chi-square, Cramér&#x27;s V = 0.32). VADER, TF-IDF with logistic regression (macro F1 0.655), LDA topic modelling.</div></div><div class="entry"><div><span class="pname">apro-tracker</span><span class="pdesc">: data collection and price tracking for used hardware listings</span></div><div class="stack">Python, Scrapling, Ollama, SQLAlchemy, Docker</div><div>Collects listings from three Hungarian second-hand marketplaces, keeps full price history, and turns messy titles into structured products with a rule parser and a locally hosted language model.</div></div><div class="entry"><div><span class="pname">Fare Dodger</span><span class="pdesc">: simulation and game on Budapest public transport</span></div><div class="stack">Python, BKK GTFS, self-written RAPTOR router</div><div>Bot-vs-bot simulations (200 games per matchup, Wilson intervals) to balance the game rules on the real BKK timetable.</div></div></section>
+</main>
+<aside>
+<section><h2>Education</h2><div class="entry"><div class="school">Corvinus University of Budapest</div><div>Data Science in Business BSc</div><div class="when">2023 - 2027 (expected)</div><ul><li>Thesis (in progress): using large language models to extract and structure knowledge from text</li></ul></div><div class="entry"><div class="school">Budapest Piarist High School</div><div>Secondary school leaving exam (érettségi)</div><div class="when">2023</div></div></section>
+<section><h2>Skills</h2><div class="skill"><b>Data and ML</b><span>Python (pandas, scikit-learn, PyTorch, NLTK), machine learning, deep learning, NLP, network analysis (networkx), operational research and LP modelling (PuLP), LLMs (prompting, structured information extraction, Ollama), web scraping, Excel automation</span></div><div class="skill"><b>Development and infrastructure</b><span>Git, GitHub, Docker, Linux, Cloudflare</span></div><div class="skill"><b>Web</b><span>WordPress, HTML/CSS</span></div></section>
+<section><h2>Languages</h2><div class="lang"><span>Hungarian</span><span>native</span></div><div class="lang"><span>English</span><span>fluent</span></div></section>
+<section><h2>Sport</h2><div class="sport">European Champion sabre fencer</div></section>
+</aside>
+</div>
+</body></html>

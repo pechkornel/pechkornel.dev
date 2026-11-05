@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Sentiment Gap, Kornél Péch</title>
+<meta name="description" content="Star ratings and review text disagree in 44.5% of 100,000 Amazon reviews. What drives the gap?">
+<meta property="og:title" content="The Sentiment Gap, Kornél Péch">
+<meta property="og:description" content="Star ratings and review text disagree in 44.5% of 100,000 Amazon reviews. What drives the gap?">
+<meta property="og:url" content="https://pechkornel.dev/projects/sentiment-gap/">
+<link rel="canonical" href="https://pechkornel.dev/projects/sentiment-gap/">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/site.css">
+</head><body>
+<nav><div class="wrap"><a class="brand" href="/">Kornél Péch</a>
+<div class="links"><a href="/#projects">Projects</a><a href="/cv/">CV</a><a href="https://github.com/pechkornel">GitHub</a></div></div></nav>
+
+<header class="proj-head"><div class="wrap"><a class="back" href="/#projects">← All projects</a>
+<h1>The Sentiment Gap</h1><p class="lead">Star ratings and review text disagree in 44.5% of 100,000 Amazon reviews. What drives the gap?</p>
+<div class="links-row"><a class="btn primary" href="https://github.com/pechkornel/sentiment-gap">View on GitHub</a><a class="btn" href="https://github.com/pechkornel/sentiment-gap/blob/main/sentiment_gap_paper.pdf">Paper (PDF)</a><a class="btn" href="https://github.com/pechkornel/sentiment-gap/blob/main/sentiment_gap_slides.pdf">Slides (PDF)</a></div></div></header>
+<div class="wrap"><dl class="meta"><div><dt>Context</dt><dd>Team project, Text Analytics</dd></div><div><dt>When</dt><dd>Spring 2026</dd></div><div><dt>Team</dt><dd>Németh Mariann, Péch Kornél, Somlai Dóra, Tulit Zsolt</dd></div><div><dt>Stack</dt><dd>Python, NLTK, scikit-learn, SciPy</dd></div></dl>
+<article><figure><img src="/assets/img/sentiment-heatmap.webp" alt="VADER sentiment labels against labels derived from the stars" loading="lazy"><figcaption>VADER sentiment labels against labels derived from the stars</figcaption></figure><h2>The question</h2><p>Shoppers lean on star ratings, but the text of a review often tells a different story. We measured how often the sentiment of the text and the star rating disagree, and tested two explanations: delivery problems, and how much people write.</p><h2>Data and methods</h2><p>A balanced sample of 100,000 verified Amazon Electronics reviews, 20,000 per star level. NLTK preprocessing, VADER sentiment, a TF-IDF and logistic regression classifier, LDA topics and a keyword-based logistics proxy checked with keyword-in-context reading. Every claim is backed by a significance test and an effect size, with robustness checks across thresholds, review length and time.</p><h2>Findings</h2><table><tr><th>Question</th><th>Result</th></tr><tr><td>How big is the gap?</td><td><b>44.5%</b> of reviews mismatch, Cramér's V = 0.32, stable across thresholds and periods</td></tr><tr><td>Do logistics complaints matter?</td><td>They cost <b>0.60 stars</b> on average, Cohen's d = 0.43</td></tr><tr><td>Does length matter?</td><td>Long reviews mismatch more: <b>50.2% vs 40.2%</b></td></tr><tr><td>Can text alone predict the rating?</td><td>Partly: macro F1 = <b>0.655</b></td></tr></table><p>Negative reviews are often written in a factual tone with few evaluative words, which a lexicon model reads as neutral. Part of the gap is therefore a limit of VADER, and a transformer model fine-tuned on reviews is the next step.</p><div class="gallery"><figure><img src="/assets/img/sentiment-vader.webp" alt="VADER compound score by star rating" loading="lazy"><figcaption>VADER compound score by star rating</figcaption></figure><figure><img src="/assets/img/sentiment-logistics.webp" alt="Share of logistics mentions by star rating" loading="lazy"><figcaption>Share of logistics mentions by star rating</figcaption></figure></div></article></div>
+<footer><div class="wrap"><span>Kornél Péch, Budapest</span>
+<span><a href="mailto:pechkornel01@gmail.com">pechkornel01@gmail.com</a> · <a href="https://github.com/pechkornel">github.com/pechkornel</a></span></div></footer>
+</body></html>

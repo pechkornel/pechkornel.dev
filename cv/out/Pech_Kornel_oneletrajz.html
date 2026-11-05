@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="hu"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Péch Kornél, CV</title><style>
+@page { size: A4; margin: 0; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root { --ink:#1b1d21; --muted:#5d6470; --line:#e3e5e8; --accent:#1f4e79; }
+html { font-family: Inter, sans-serif; color: var(--ink); font-size: 9pt; line-height: 1.42;
+       -webkit-font-smoothing: antialiased; }
+body { width: 210mm; height: 297mm; overflow: hidden; padding: 14mm 14mm 11mm; }
+a { color: inherit; text-decoration: none; }
+mark { background: #fff1c2; color: #7a5a00; padding: 0 2px; border-radius: 2px; }
+header { padding-bottom: 5.5mm; border-bottom: 1px solid var(--line); margin-bottom: 5.5mm; }
+h1 { font-family: 'Inter Display', Inter, sans-serif; font-weight: 600; font-size: 25pt;
+     letter-spacing: -0.02em; line-height: 1.1; }
+.title { color: var(--accent); font-weight: 500; font-size: 11pt; margin-top: 1.5mm; }
+.contact { color: var(--muted); margin-top: 3mm; display: flex; flex-wrap: wrap; align-items: center; }
+.dot { width: 3px; height: 3px; background: #b5bac2; border-radius: 50%; margin: 0 2.4mm; display: inline-block; }
+.grid { display: grid; grid-template-columns: 1fr 58mm; gap: 9mm; }
+h2 { font-size: 7.6pt; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
+     color: var(--accent); margin-bottom: 2.6mm; }
+section { margin-bottom: 5.2mm; }
+section:last-child { margin-bottom: 0; }
+.entry { margin-bottom: 3.6mm; }
+.entry:last-child { margin-bottom: 0; }
+.row { display: flex; justify-content: space-between; align-items: baseline; gap: 4mm; }
+.role { font-weight: 600; font-size: 10pt; }
+.org { color: var(--muted); }
+.when { color: var(--muted); font-size: 8.4pt; white-space: nowrap; font-variant-numeric: tabular-nums; }
+ul { list-style: none; margin-top: 1.3mm; }
+li { position: relative; padding-left: 3.6mm; margin-bottom: 0.9mm; }
+li::before { content: ""; position: absolute; left: 0.4mm; top: 0.62em; width: 3.5px; height: 3.5px;
+             background: var(--accent); border-radius: 50%; }
+.pname { font-weight: 600; }
+.pdesc { color: var(--muted); }
+.stack { font-size: 8.2pt; color: var(--accent); margin: 0.6mm 0 0.6mm; }
+aside .entry { margin-bottom: 3mm; }
+.school { font-weight: 600; }
+.skill { margin-bottom: 2.4mm; }
+.skill b { display: block; font-weight: 600; font-size: 8.6pt; }
+.skill span { color: #3a3f47; }
+.lang { display: flex; justify-content: space-between; margin-bottom: 1mm; }
+.lang span:last-child { color: var(--muted); }
+.sport { font-weight: 500; }
+aside li { font-size: 8.8pt; }
+</style></head>
+<body>
+<header><h1>Péch Kornél</h1><div class="title">Data science hallgató</div>
+<div class="contact"><span>Budapest</span><span class="dot"></span><a href="mailto:pechkornel01@gmail.com">pechkornel01@gmail.com</a><span class="dot"></span><a href="tel:+36302001692">+36 30 200 1692</a><span class="dot"></span><a href="https://github.com/pechkornel">github.com/pechkornel</a><span class="dot"></span><a href="https://pechkornel.dev">pechkornel.dev</a></div></header>
+<div class="grid">
+<main>
+<section><h2>Bemutatkozás</h2><p>A Budapesti Corvinus Egyetem Data Science in Business BSc szakos hallgatója vagyok. A Python, a gépi tanulás és a nagy nyelvi modellek érdekelnek, ezekkel saját projektekben és a szakdolgozatomban is dolgozom: építettem egy adatgyűjtő rendszert helyben futó nyelvi modellel, a szakdolgozatomban pedig szövegből nyerek ki strukturált tudást. Vállalati környezetben controlling gyakornokként szereztem tapasztalatot.</p></section>
+<section><h2>Szakmai tapasztalat</h2><div class="entry"><div class="row"><div><span class="role">Controlling gyakornok</span><span class="org">, Dometic</span></div><div class="when">2025. augusztus</div></div><ul><li>Excel-alapú folyamatok automatizálása</li></ul></div><div class="entry"><div class="row"><div><span class="role">Webfejlesztés és AI-megoldások</span><span class="org">, egyéni vállalkozó</span></div><div class="when"></div></div><ul><li>Ügyfélkereső eszköz Google Places adatokkal és a potenciális ügyfelek pontozásával</li><li>Élesben futó Google-értékeléskérő automatizáció egy budapesti virágboltnak (WooCommerce webhook, saját küldő domain SPF/DKIM/DMARC beállítással)</li><li>AI-chatbotok és automatizációk, valamint weboldalak és webshopok (WordPress, WooCommerce) kis- és középvállalkozásoknak</li></ul></div></section>
+<section><h2>Projektek</h2><div class="entry"><div><span class="pname">Credit Risk Early Warning System</span><span class="pdesc">: kurzusprojekt, mélytanulási rész</span></div><div class="stack">Python, PyTorch, pandas, scikit-learn</div><div>LSTM és MLP kódolóból álló fúziós modell napi piaci adatokon (CDS, hozam, devizavolatilitás) és havi makroadatokon, amely 30-90 napra előre jelzi az országok S&amp;P minősítésének változását. Időrendi validáció, osztálysúlyozás a ritka események miatt.</div></div><div class="entry"><div><span class="pname">The Sentiment Gap</span><span class="pdesc">: szövegelemzési csapatprojekt</span></div><div class="stack">Python, NLTK, scikit-learn, SciPy</div><div>100 000 Amazon-értékelésen kimutattuk, hogy a csillagszám és a szöveg hangulata az esetek 44,5%-ában eltér (khi-négyzet, Cramér V = 0,32). VADER, TF-IDF és logisztikus regresszió (macro F1 0,655), LDA témamodellezés.</div></div><div class="entry"><div><span class="pname">apro-tracker</span><span class="pdesc">: adatgyűjtő és árfigyelő rendszer használt hardverhirdetésekre</span></div><div class="stack">Python, Scrapling, Ollama, SQLAlchemy, Docker</div><div>Három magyar használtpiac hirdetéseit gyűjti, megőrzi a teljes ártörténetet, és a zajos címeket szabályalapú parserrel és helyben futó nyelvi modellel strukturált termékekké alakítja.</div></div><div class="entry"><div><span class="pname">Fare Dodger</span><span class="pdesc">: szimuláció és játék a budapesti tömegközlekedésen</span></div><div class="stack">Python, BKK GTFS, saját RAPTOR útvonaltervező</div><div>Botok közötti szimulációk (200 játék párosításonként, Wilson-intervallumokkal) a játékszabályok kiegyensúlyozására a BKK valós menetrendjén.</div></div></section>
+</main>
+<aside>
+<section><h2>Tanulmányok</h2><div class="entry"><div class="school">Budapesti Corvinus Egyetem</div><div>Data Science in Business BSc</div><div class="when">2023 - 2027 (várható)</div><ul><li>Szakdolgozat (folyamatban): nagy nyelvi modellek alkalmazása szövegből történő tudáskinyerésre és strukturálásra</li></ul></div><div class="entry"><div class="school">Budapesti Piarista Gimnázium</div><div>Érettségi</div><div class="when">2023</div></div></section>
+<section><h2>Készségek</h2><div class="skill"><b>Adat és ML</b><span>Python (pandas, scikit-learn, PyTorch, NLTK), gépi tanulás, mélytanulás, NLP, hálózatelemzés (networkx), operációkutatás és LP modellezés (PuLP), LLM-ek (promptolás, strukturált adatkinyerés, Ollama), web scraping, Excel-automatizálás</span></div><div class="skill"><b>Fejlesztés és infrastruktúra</b><span>Git, GitHub, Docker, Linux, Cloudflare</span></div><div class="skill"><b>Web</b><span>WordPress, HTML/CSS</span></div></section>
+<section><h2>Nyelvek</h2><div class="lang"><span>Magyar</span><span>anyanyelv</span></div><div class="lang"><span>Angol</span><span>folyékony</span></div></section>
+<section><h2>Sport</h2><div class="sport">Európa-bajnok kardvívó</div></section>
+</aside>
+</div>
+</body></html>

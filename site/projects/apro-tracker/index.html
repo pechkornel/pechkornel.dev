@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>apro-tracker, Kornél Péch</title>
+<meta name="description" content="A price tracker for used PC parts that crawls three Hungarian marketplaces, keeps the full history of every listing and turns messy titles into structured products.">
+<meta property="og:title" content="apro-tracker, Kornél Péch">
+<meta property="og:description" content="A price tracker for used PC parts that crawls three Hungarian marketplaces, keeps the full history of every listing and turns messy titles into structured products.">
+<meta property="og:url" content="https://pechkornel.dev/projects/apro-tracker/">
+<link rel="canonical" href="https://pechkornel.dev/projects/apro-tracker/">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/site.css">
+</head><body>
+<nav><div class="wrap"><a class="brand" href="/">Kornél Péch</a>
+<div class="links"><a href="/#projects">Projects</a><a href="/cv/">CV</a><a href="https://github.com/pechkornel">GitHub</a></div></div></nav>
+
+<header class="proj-head"><div class="wrap"><a class="back" href="/#projects">← All projects</a>
+<h1>apro-tracker</h1><p class="lead">A price tracker for used PC parts that crawls three Hungarian marketplaces, keeps the full history of every listing and turns messy titles into structured products.</p>
+<div class="links-row"></div><p class="note">Private repository, happy to walk through the code on request.</p></div></header>
+<div class="wrap"><dl class="meta"><div><dt>Context</dt><dd>Personal project</dd></div><div><dt>When</dt><dd>2026, ongoing</dd></div><div><dt>Stack</dt><dd>Python, Scrapling, SQLAlchemy, Alembic, FastAPI, HTMX, Ollama, Docker</dd></div></dl>
+<article><figure><img src="/assets/img/apro-model.webp" alt="Price history page for one GPU model" loading="lazy"><figcaption>Price history page for one GPU model</figcaption></figure><h2>What it does</h2><p>Every 30 minutes it crawls the GPU, CPU, motherboard, memory, PSU, storage and case categories of HardverApró, and Jófogás and Vatera every two hours. It records every price change, title edit, reservation and disappearance, so it knows what a part usually sells for and how fast it goes.</p><h2>The data problem</h2><p>Listing titles are written by hand, for example <code>Gigabyte RTX 3070 Gaming OC 8GB garis</code>. A rule parser turns most of them into structured products (brand, model, memory, maker), and a small local language model running on my own server handles the cases the rules are unsure about.</p><h2>Engineering</h2><ul><li>Typed Python (mypy strict), tests and CI, database migrations with Alembic.</li><li>26 written architecture decision records.</li><li>A server-rendered web UI with deals, price history and watchlists, published behind an invite-only Cloudflare Access gate.</li><li>Runs in Docker on my homelab server, with backups and one-click updates.</li></ul><div class="gallery one"><figure><img src="/assets/img/apro-buys.webp" alt="Deals page: best used parts right now, against their usual price" loading="lazy"><figcaption>Deals page: best used parts right now, against their usual price</figcaption></figure></div></article></div>
+<footer><div class="wrap"><span>Kornél Péch, Budapest</span>
+<span><a href="mailto:pechkornel01@gmail.com">pechkornel01@gmail.com</a> · <a href="https://github.com/pechkornel">github.com/pechkornel</a></span></div></footer>
+</body></html>
