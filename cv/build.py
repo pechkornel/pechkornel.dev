@@ -17,7 +17,7 @@ CV = {
         "name": "Péch Kornél",
         "title": "Data science hallgató",
         "contact": ["Budapest", "pechkornel01@gmail.com", "+36 30 200 1692",
-                    "github.com/pechkornel", "pechkornel.dev"],
+                    "github.com/pechkornel", "LinkedIn", "pechkornel.dev"],
         "h": {"profile": "Bemutatkozás", "exp": "Szakmai tapasztalat", "proj": "Projektek",
               "edu": "Tanulmányok", "skills": "Készségek", "lang": "Nyelvek", "sport": "Sport"},
         "profile": "A Budapesti Corvinus Egyetem Data Science in Business BSc szakos hallgatója vagyok. "
@@ -78,7 +78,7 @@ CV = {
         "name": "Kornél Péch",
         "title": "Data Science student",
         "contact": ["Budapest, Hungary", "pechkornel01@gmail.com", "+36 30 200 1692",
-                    "github.com/pechkornel", "pechkornel.dev"],
+                    "github.com/pechkornel", "LinkedIn", "pechkornel.dev"],
         "h": {"profile": "Profile", "exp": "Experience", "proj": "Projects",
               "edu": "Education", "skills": "Skills", "lang": "Languages", "sport": "Sport"},
         "profile": "Data Science in Business BSc student at Corvinus University of Budapest. I am interested "
@@ -139,6 +139,7 @@ CV = {
 LINKS = {"pechkornel01@gmail.com": "mailto:pechkornel01@gmail.com",
          "+36 30 200 1692": "tel:+36302001692",
          "github.com/pechkornel": "https://github.com/pechkornel",
+         "LinkedIn": "https://www.linkedin.com/in/kornel-pech-41663a252/",
          "pechkornel.dev": "https://pechkornel.dev"}
 
 
@@ -171,8 +172,8 @@ header { padding-bottom: 5.5mm; border-bottom: 1px solid var(--line); margin-bot
 h1 { font-family: 'Inter Display', Inter, sans-serif; font-weight: 600; font-size: 25pt;
      letter-spacing: -0.02em; line-height: 1.1; }
 .title { color: var(--accent); font-weight: 500; font-size: 11pt; margin-top: 1.5mm; }
-.contact { color: var(--muted); margin-top: 3mm; display: flex; flex-wrap: wrap; align-items: center; }
-.dot { width: 3px; height: 3px; background: #b5bac2; border-radius: 50%; margin: 0 2.4mm; display: inline-block; }
+.contact { color: var(--muted); margin-top: 3mm; display: flex; flex-wrap: wrap; align-items: center; font-size: 8.5pt; }
+.dot { width: 3px; height: 3px; background: #b5bac2; border-radius: 50%; margin: 0 1.8mm; display: inline-block; }
 .grid { display: grid; grid-template-columns: 1fr 58mm; gap: 9mm; }
 h2 { font-size: 7.6pt; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
      color: var(--accent); margin-bottom: 2.6mm; }

@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="/assets/site.css">
 </head><body>
 <nav><div class="wrap"><a class="brand" href="/">Kornél Péch</a>
-<div class="links"><a href="/#projects">Projects</a><a href="/cv/">CV</a><a href="https://github.com/pechkornel">GitHub</a></div></div></nav>
+<div class="links"><a href="/#projects">Projects</a><a href="/cv/">CV</a><a href="https://github.com/pechkornel">GitHub</a><a href="https://www.linkedin.com/in/kornel-pech-41663a252/">LinkedIn</a></div></div></nav>
 
 <header class="proj-head"><div class="wrap"><a class="back" href="/#projects">← All projects</a>
 <h1>Fare Dodger</h1><p class="lead">A hidden-movement chase game on the real Budapest timetable, balanced with thousands of bot-vs-bot simulations.</p>
@@ -19,5 +19,5 @@
 <div class="wrap"><dl class="meta"><div><dt>Context</dt><dd>Personal project</dd></div><div><dt>When</dt><dd>2026, ongoing</dd></div><div><dt>Stack</dt><dd>Python, BKK GTFS, Docker</dd></div></dl>
 <article><h2>The game</h2><p>One hidden Fare Dodger tries to stay ahead of three Inspectors for 12 rounds. Every round is 10 minutes of real weekday service on the Budapest metro, tram, trolleybus and main bus lines, and every move is validated against the timetable.</p><h2>Under the hood</h2><ul><li>GTFS ingestion of the BKK feed into a playable network of 421 stations.</li><li>A self-written RAPTOR router for fast earliest-arrival journeys.</li><li>Bots: a greedy Dodger that maximises distance to the Inspectors, and Inspectors that track every station the Dodger could be at and spread to cover it (also a k-means variant).</li><li>A deterministic simulation runner, and a real-time 3D browser version for team play.</li></ul><h2>Balancing with data</h2><p>The target is a Dodger win rate of about 45% against the best Inspectors. I ran 200 games per matchup and report Wilson 95% intervals.</p><table><tr><th>Rule set</th><th>Dodger wins</th></tr><tr><td>Original rules</td><td>76.0% [70-81%]</td></tr><tr><td>Four Inspectors</td><td>71.0% [64-77%]</td></tr><tr><td>Reveal transport modes</td><td>57.0% [50-64%]</td></tr><tr><td>Reveal modes, position every 2nd round</td><td><b>46.5% [40-53%]</b></td></tr></table><p>The lesson: <b>information is the bottleneck, not manpower</b>. A fourth Inspector barely helps, while revealing more information shrinks the set of possible positions and brings the game into balance.</p></article></div>
 <footer><div class="wrap"><span>Kornél Péch, Budapest</span>
-<span><a href="mailto:pechkornel01@gmail.com">pechkornel01@gmail.com</a> · <a href="https://github.com/pechkornel">github.com/pechkornel</a></span></div></footer>
+<span><a href="mailto:pechkornel01@gmail.com">pechkornel01@gmail.com</a> · <a href="https://github.com/pechkornel">github.com/pechkornel</a> · <a href="https://www.linkedin.com/in/kornel-pech-41663a252/">LinkedIn</a></span></div></footer>
 </body></html>

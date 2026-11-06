@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="/assets/site.css">
 </head><body>
 <nav><div class="wrap"><a class="brand" href="/">Kornél Péch</a>
-<div class="links"><a href="/#projects">Projects</a><a href="/cv/">CV</a><a href="https://github.com/pechkornel">GitHub</a></div></div></nav>
+<div class="links"><a href="/#projects">Projects</a><a href="/cv/">CV</a><a href="https://github.com/pechkornel">GitHub</a><a href="https://www.linkedin.com/in/kornel-pech-41663a252/">LinkedIn</a></div></div></nav>
 
 <header class="proj-head"><div class="wrap"><a class="back" href="/#projects">← All projects</a>
 <h1>Paper-trading portfolio bot</h1><p class="lead">XGBoost and LSTM trend models, a score-based ETF allocation and a news sentiment sleeve, running on paper money with a web dashboard.</p>
@@ -19,5 +19,5 @@
 <div class="wrap"><dl class="meta"><div><dt>Context</dt><dd>Personal project</dd></div><div><dt>When</dt><dd>2025 to 2026</dd></div><div><dt>Stack</dt><dd>Python, scikit-learn, XGBoost, TensorFlow, FastAPI, HTMX, SQLite, Docker</dd></div></dl>
 <article><h2>From experiments to one system</h2><p>It started as four separate scripts: an XGBoost trend classifier, an LSTM, a test bot and a backtester. I consolidated them into one codebase with a model registry, so the live runner always loads a model together with the features and scaler it was trained with.</p><h2>Strategy</h2><ul><li><b>Core sleeve (70%):</b> weekly scores for 10 ETFs from momentum, macro alignment and trend, holding the top 4, with a risk-off switch to bonds.</li><li><b>Sentiment sleeve (20%):</b> long positions on strong bullish news spikes from the Alpha Vantage sentiment API, with a time exit and a stop.</li><li><b>Tactical models:</b> technical indicators as features, XGBoost (class weights or SMOTE) and a 2-layer LSTM, fused 70/30 with sentiment and sized by volatility targeting.</li></ul><h2>Safety first</h2><p>The bot refuses to start unless it is pointed at a paper account, runs as a dry run by default, and keeps every decision and order in SQLite for the FastAPI and HTMX dashboard.</p></article></div>
 <footer><div class="wrap"><span>Kornél Péch, Budapest</span>
-<span><a href="mailto:pechkornel01@gmail.com">pechkornel01@gmail.com</a> · <a href="https://github.com/pechkornel">github.com/pechkornel</a></span></div></footer>
+<span><a href="mailto:pechkornel01@gmail.com">pechkornel01@gmail.com</a> · <a href="https://github.com/pechkornel">github.com/pechkornel</a> · <a href="https://www.linkedin.com/in/kornel-pech-41663a252/">LinkedIn</a></span></div></footer>
 </body></html>

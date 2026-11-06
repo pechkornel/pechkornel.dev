@@ -11,6 +11,7 @@ import shutil
 ROOT = pathlib.Path(__file__).resolve().parent
 OUT = ROOT.parent / "site"
 GH = "https://github.com/pechkornel"
+LI = "https://www.linkedin.com/in/kornel-pech-41663a252/"
 
 # ---------------------------------------------------------------- content
 PROJECTS = [
@@ -278,10 +279,10 @@ def page(title, body, desc=DESC, path="/"):
 <link rel="stylesheet" href="/assets/site.css">
 </head><body>
 <nav><div class="wrap"><a class="brand" href="/">Kornél Péch</a>
-<div class="links"><a href="/#projects">Projects</a><a href="/cv/">CV</a><a href="{GH}">GitHub</a></div></div></nav>
+<div class="links"><a href="/#projects">Projects</a><a href="/cv/">CV</a><a href="{GH}">GitHub</a><a href="{LI}">LinkedIn</a></div></div></nav>
 {body}
 <footer><div class="wrap"><span>Kornél Péch, Budapest</span>
-<span><a href="mailto:pechkornel01@gmail.com">pechkornel01@gmail.com</a> · <a href="{GH}">github.com/pechkornel</a></span></div></footer>
+<span><a href="mailto:pechkornel01@gmail.com">pechkornel01@gmail.com</a> · <a href="{GH}">github.com/pechkornel</a> · <a href="{LI}">LinkedIn</a></span></div></footer>
 </body></html>"""
 
 
@@ -303,6 +304,7 @@ def index():
 <p>Data science student at Corvinus University of Budapest. I build machine learning models, data
 pipelines and the tools around them, from scraping the data to shipping the dashboard.</p>
 <div class="cta"><a class="btn primary" href="/cv/">View CV</a><a class="btn" href="{GH}">GitHub</a>
+<a class="btn" href="{LI}">LinkedIn</a>
 <a class="btn" href="mailto:pechkornel01@gmail.com">Email me</a></div>
 </div></header>
 <section id="projects"><div class="wrap"><div class="eyebrow">Selected projects</div>
